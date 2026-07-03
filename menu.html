@@ -4,19 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
+    <style>
+        /* Modern Reset & Base Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+
+        /* Menu Grid Container */
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 10px;
+        }
+
+        /* Individual Food Card */
+        .menu-item {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Image Styling */
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Prevents stretching/distortion */
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Item Name Styling */
+        .item-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #34495e;
+            margin: 15px 10px 0 10px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Menu:</h2>
 
-<img height="200" src="food/images.jpg" alt="item1"> Fried rice
-<br><br>
-<img height="200" src="food/download.jpg" alt="item2"> Burger
-<br><br>
-<img height="200" src="food/images (1).jpg" alt="item3"> Chicken fry
-<br><br>
-<img height="200" src="food/images (2).jpg" alt="item4"> Sausage
-<br><br>
-<img height="200" src="food/images (3).jpg" alt="item5"> Brownie
+    <h2>Our Menu</h2>
+
+    <div class="menu-container">
+        
+        <div class="menu-item">
+            <img src="food/images.jpg" alt="Fried rice">
+            <div class="item-name">Fried Rice</div>
+        </div>
+
+        <div class="menu-item">
+            <img src="food/download.jpg" alt="Burger">
+            <div class="item-name">Burger</div>
+        </div>
+
+        <div class="menu-item">
+            <img src="food/images (1).jpg" alt="Chicken fry">
+            <div class="item-name">Chicken Fry</div>
+        </div>
+
+        <div class="menu-item">
+            <img src="food/images (2).jpg" alt="Sausage">
+            <div class="item-name">Sausage</div>
+        </div>
+
+        <div class="menu-item">
+            <img src="food/images (3).jpg" alt="Brownie">
+            <div class="item-name">Brownie</div>
+        </div>
+
+    </div>
 
 </body>
 </html>
